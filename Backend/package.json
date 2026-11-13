@@ -1,0 +1,24 @@
+{
+  "name": "lingua-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js && node --check config/db.js && node --check config/socket.js && node --check controllers/authController.js && node --check controllers/userController.js && node --check controllers/meetingController.js && node --check controllers/translationController.js && node --check middleware/authMiddleware.js && node --check middleware/errorMiddleware.js && node --check models/User.js && node --check models/Meeting.js && node --check models/Participant.js && node --check routes/authRoutes.js && node --check routes/userRoutes.js && node --check routes/meetingRoutes.js && node --check routes/translationRoutes.js && node --check services/authService.js && node --check services/userService.js && node --check services/meetingService.js && node --check services/translationService.js && node --check ai-services/speechToText.js && node --check ai-services/translateText.js && node --check ai-services/textToSpeech.js && node --check ai-services/translationPipeline.js && node --check sockets/index.js && node --check sockets/meetingSocket.js && node --check sockets/signalingSocket.js && node --check sockets/chatSocket.js && node --check utils/asyncHandler.js && node --check utils/generateToken.js && node --check utils/generateMeetingId.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.4",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
